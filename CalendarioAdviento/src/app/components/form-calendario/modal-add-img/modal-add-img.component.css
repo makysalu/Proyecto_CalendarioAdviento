@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "KRIS-KRINGLE";
+  src: url("../../../../assets/fuentes/KRIS-KRINGLE/KRIS-KRINGLE.ttf");
+}
+
+.modal-header {
+  background-image: url(../../../../assets/backgraundRed.jpg);
+  background-position-x: 760px;
+}
+
+.modal-header h5 {
+  font-size: 40px;
+  font-family: "KRIS-KRINGLE";
+  margin: 0;
+  color: whitesmoke;
+}
+
+.add-new-photo {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  background-color: whitesmoke;
+  border: 3px groove #ebc159;
+  border-radius: 5px;
+}
+
+.add-new-photo:hover {
+  background: rgb(255, 45, 45);
+  color: rgb(196, 173, 173);
+}
+
+#add-photo-container input {
+  display: none;
+}
+
+.calendario {
+  width: 650px;
+  height: 425px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.figure-calendario {
+  position: relative;
+  background-color: transparent;
+}

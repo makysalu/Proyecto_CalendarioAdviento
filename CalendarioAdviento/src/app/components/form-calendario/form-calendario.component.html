@@ -1,0 +1,208 @@
+<header
+  class="container-fluid text-white p-4 text-center"
+>
+  <h1>Generar Calendario</h1>
+</header>
+
+<div class="container-fluid bg-light bg-opacity-50">
+  <div id="diseño" class="row">
+    <div
+      class="
+        col-12
+        text-center
+        mt-4
+        mb-4
+        text-danger text-gradient text-opacity-50
+      "
+    >
+      <h2>Seleccione el Calendario</h2>
+    </div>
+    <div class="col-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <img
+              src="../../../../assets/calendario.jpg"
+              class="img-fluid img-thumbnail calendarios"
+              [ngClass]="{ 'bg-danger': opcionCalendario == 1 }"
+              alt="..."
+              (click)="cambioOpcion(1)"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="../../../../assets/calendario2.png"
+              class="img-fluid img-thumbnail calendarios"
+              [ngClass]="{ 'bg-danger': opcionCalendario == 2 }"
+              alt="..."
+              (click)="cambioOpcion(2)"
+            />
+          </div>
+          <div class="col-4">
+            <img
+              src="../../../../assets/calendario3.png"
+              class="img-fluid img-thumbnail calendarios"
+              [ngClass]="{ 'bg-danger': opcionCalendario == 3 }"
+              alt="..."
+              (click)="cambioOpcion(3)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div
+      class="
+        col-12
+        text-center
+        mt-4
+        mb-4
+        text-danger text-gradient text-opacity-50
+      "
+    >
+      <h2>Añade las Imagenes</h2>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+      <div
+        id="add-photo-container"
+        class="calendario"
+        [ngClass]="{ calendario1: opcionCalendario == 1 }"
+        [style.background-image]="
+          'url(' + calendarios[opcionCalendario - 1] + ')'
+        "
+      >
+        <div
+          *ngFor="let photoSelected of photoSelecteds; let index = index"
+          style="position: relative"
+          id="img{{ index + 1 }}"
+          class="figure-calendarie"
+          (click)="addPhoto(index)"
+        >
+          <div
+            class="celda-numerica"            
+            *ngIf="photoSelected == null"
+            [ngClass]="{'celda-numerica-24': index==23}"
+          >
+            {{ index + 1 }}
+          </div>
+          <img
+            *ngIf="photoSelected != null"
+            [src]="photoSelected"
+            class="img-fluid add-new-photo"
+            [ngClass]="{'img24': index==23}"
+            alt="No image"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2 col-4 mx-auto mt-5">
+      <button
+        class="btn btn-danger fs-3 pl-5 pr-5 rounded-3"
+        type="submit"
+        (click)="generarCalendario()"
+      >
+        Generar
+      </button>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-secondary"
+    data-bs-toggle="modal"
+    data-bs-target="#launcherModal"
+    data-bs-dismiss="modal"
+    #botonLauncherModal
+    hidden
+  ></button>
+
+  <div class="modal fade" tabindex="-1" id="launcherModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header" hidden>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="modal-body">
+          <h3 class="text-danger text-center">Loading</h3>
+          <div class="d-flex justify-content-center aling-center">
+            <div class="spinner-border text-danger" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" hidden>
+          <button
+            type="button"
+            class="btn btn-secondary fs-5 p-1 rounded-3"
+            data-bs-dismiss="modal"
+            #botoncerrarLauncherModal
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-secondary"
+    data-bs-toggle="modal"
+    data-bs-target="#calendarioModal"
+    data-bs-dismiss="modal"
+    #botonCalendarioModal
+    hidden
+  ></button>
+  <div class="modal fade" tabindex="-1" id="calendarioModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Calendario</h5>
+          <button
+            type="button"
+            class="btn-close text-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body text-center">
+          <div>
+            Se ha Generado el tu calendario. Para acceder a el solo tienes que
+            pulsar sobre la url del calendario
+          </div>
+          <div>
+            <a href="http://localhost:4200/calendario/{{ idCalendario }}"
+              >http://localhost:4200/calendario/{{ idCalendario }}</a
+            >
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary fs-5 p-1 rounded-3"
+            data-bs-dismiss="modal"
+            #botoncerrarCalendarioModal
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-modal-add-img (cargarImagen)="cargarImagen($event)"></app-modal-add-img>
+
+  <div class="container mt-5 mb-5 p-3">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+</div>

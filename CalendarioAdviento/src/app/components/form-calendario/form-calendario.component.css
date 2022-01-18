@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "city-of-Light";
+  src: url("../../../assets/fuentes/KRIS-KRINGLE/KRIS-KRINGLE.ttf");
+}
+
+@font-face {
+  font-family: 'KRIS-KRINGLE';
+  src: url('../../../assets/fuentes/KRIS-KRINGLE/KRIS-KRINGLE.ttf');
+}
+
+@font-face {
+  font-family: 'KRIS-KRINGLE2';
+  src: url('../../../assets/fuentes/christmas_tree_lights/ChristmasTreeLights.otf');
+}
+
+header, .modal-header{
+  background-image: url(../../../assets/backgraundRed.jpg);
+}
+
+h1{
+  font-size: 40px;
+  font-family: "KRIS-KRINGLE";
+  margin: 0;
+  color: whitesmoke;  
+}
+
+h2{
+  font-size: 30px;
+  font-family: "KRIS-KRINGLE";
+  margin: 0;
+  color: red;
+}
+.calendarios{
+  width: 450px;
+  height: 300px;
+}
+
+.form-check-input:checked {
+  color: white;
+  border-color: #a21f1f;
+  background-color: red;
+}
+
+.add-new-photo {
+  display: flex;
+  width: 450px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  background-color: rgb(255, 45, 45);
+}
+
+.add-new-photo:hover {
+  background: whitesmoke;
+  color: rgb(196, 173, 173);
+}
+
+#add-photo-container input {
+  display: none;
+}
+
+.calendario {
+  width: 1300px;
+  height: 850px;
+  background-size: cover;
+  outline: 10px groove #ebc159;
+  border-radius: 10px;
+}
+
+#img1 {
+  left:67px;
+  top: 27px;
+}
+
+#img2 {
+  left: 695px;
+  top: 164px;
+}
+
+#img3 {
+  left: 313px;
+  top: 484px;
+}
+
+#img4 {
+  left: 1103px;
+  top: 220px;
+}
+
+#img5 {
+  left: 502px;
+  top: -356px;
+}
+
+#img6 {
+  left: 151px;
+  top: 88px;
+}
+
+#img7 {
+  left: 304px;
+  top: -270px;
+}
+
+#img8 {
+  left: 848px;
+  top: -568px;
+}
+
+#img9 {
+  left: 596px;
+  top: -66px;
+}
+
+#img10 {
+  left: 861px;
+  top: -568px;
+}
+
+#img11 {
+  left: 640px;
+  top: -581px;
+}
+
+#img12 {
+  left: 1150px;
+  top: -370px;
+}
+
+#img13 {
+  left: 520px;
+  top: -652px;
+}
+
+#img14 {
+  left: 41px;
+  top: -1100px;
+}
+
+#img15 {
+  left: 738px;
+  top: -756px;
+}
+
+#img16 {
+  left: 1024px;
+  top: -1138px;
+}
+
+#img17 {
+  left: 350px;
+  top: -1086px;
+}
+
+#img18 {
+  left: 978px;
+  top: -1095px;
+}
+
+#img19 {
+  left: 482px;
+  top: -1556px;
+}
+
+#img20 {
+  left: 68px;
+  top: -1462px;
+}
+
+#img21 {
+  left: 853px;
+  top: -1506px;
+}
+
+#img22 {
+  left: 637px;
+  top: -2002px;
+}
+
+#img23 {
+  left: 294px;
+  top: -2116px;
+}
+
+#img24 {
+  left: 1043px;
+  top: -2239px;
+  width: 200px;
+  height: 200px;
+}
+
+.figure-calendarie {
+  position: relative;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border: 10px groove #ebc159;
+  border-radius: 5px;
+}
+
+.celda-numerica{
+  margin-top: 10px;
+  font-size: 40px;
+  font-family: "city-of-light";
+  text-align: center;
+  color: #ebc159;
+  -webkit-text-stroke: 2px hsl(51, 96%, 33%);
+}
+
+.celda-numerica-24{
+  margin-top: 30px;
+  font-size: 80px;
+}
+
+.img24{
+  height: auto;
+}

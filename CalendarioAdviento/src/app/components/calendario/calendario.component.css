@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "city-of-Light";
+  src: url("../../../assets/fuentes/KRIS-KRINGLE/KRIS-KRINGLE.ttf");
+}
+
+@font-face {
+  font-family: 'KRIS-KRINGLE';
+  src: url('../../../assets/fuentes/KRIS-KRINGLE/KRIS-KRINGLE.ttf');
+}
+
+
+header{
+  background-image: url(../../../assets/backgraundRed.jpg);
+}
+
+h1{
+  font-size: 40px;
+  font-family: "KRIS-KRINGLE";
+  margin: 0;
+  color: whitesmoke;  
+}
+
+#calendario{
+  background-image: url('src\assets\calendario.jpg');
+  width: 1300px;
+  height: 850px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#img1{
+  left: 55px;
+  top: 27px;
+}
+
+#img2{
+  left: 683px;
+  top: 166px;
+}
+
+#img3{
+  left: 302px;
+  top: 485px;
+}
+
+#img4{
+  left: 1091px;
+  top: 220px;
+}
+
+#img5{
+  left: 490px;
+  top: -355px;
+}
+
+#img6{
+  left: 139px;
+  top: 87px;
+}
+
+#img7{
+  left: 292px;
+  top: -270px;
+}
+
+#img8{
+  left: 836px;
+  top: -568px;
+}
+
+
+#img9{
+  left: 583px;
+  top: -65px;
+}
+
+#img10{
+  left: 849px;
+  top: -567px;
+}
+
+#img11{
+  left: 627px;
+  top: -583px;
+}
+
+#img12{
+  left: 1138px;
+  top: -371px;
+}
+
+#img13{
+  left: 507px;
+  top: -653px;
+}
+
+#img14{
+  left: 29px;
+  top: -1100px;
+}
+
+#img15{
+  left: 725px;
+  top: -756px;
+}
+
+#img16{
+  left: 1012px;
+  top: -1138px;
+}
+
+#img17{
+  left: 338px;
+  top: -1086px;
+}
+
+#img18{
+  left: 966px;
+  top: -1095px;
+}
+
+#img19{
+  left: 469px;
+  top: -1557px;
+}
+
+#img20{
+  left: 57px;
+  top: -1462px;
+}
+
+#img21{
+  left: 840px;
+  top: -1506px;
+}
+
+#img22{
+  left: 625px;
+  top: -2003px;
+}
+
+#img23{
+  left: 281px;
+  top: -2118px;
+}
+
+#img24{
+  border: 7px groove #ebc159;
+  left: 1035px;
+  top: -2238px;
+  width: 194px;
+  height: 194px;
+}
+
+.figure-calendarie{
+  position: relative;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border: 5px groove #ebc159;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.celda-numerica{
+  margin-top: 14px;
+  font-size: 40px;
+  font-family: "city-of-light";
+  text-align: center;
+  color: rgb(235, 200, 3);
+  -webkit-text-stroke: 1px rgb(163, 139, 3);
+}
+
+.celda-numerica-24{
+  margin-top: 20px;
+  font-size: 60px;
+}

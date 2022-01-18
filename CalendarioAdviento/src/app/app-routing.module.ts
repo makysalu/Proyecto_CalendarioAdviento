@@ -5,13 +5,16 @@ import { FormCalendarioComponent } from './components/form-calendario/form-calen
 import { LoginComponent } from './components/login/login.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { AuthGuard } from './guardianes/auth.guard';
+import { NoEncontradoComponentComponent } from './no-encontrado-component/no-encontrado-component.component';
 
 const routes: Routes = [
   {path: '', component:PrincipalComponent},
   {path: 'calendario/:id', component:CalendarioComponent},
   {path: 'login', component:LoginComponent},
   {path: 'registro', component:RegistroComponent},
-  {path: 'generar-calendario', component:FormCalendarioComponent}
+  {path: 'generar-calendario', component:FormCalendarioComponent, canActivate: [AuthGuard] },
+  {path:'**', component: NoEncontradoComponentComponent}
 ];
 
 

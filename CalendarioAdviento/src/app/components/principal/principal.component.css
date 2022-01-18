@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "city-of-Light";
+  src: url("../../../assets/fuentes/KRIS-KRINGLE/KRIS-KRINGLE.ttf");
+}
+
+@font-face {
+  font-family: "KRIS-KRINGLE";
+  src: url("../../../assets/fuentes/KRIS-KRINGLE/KRIS-KRINGLE.ttf");
+}
+
+@font-face {
+  font-family: "KRIS-KRINGLE2";
+  src: url("../../../assets/fuentes/christmas_tree_lights/ChristmasTreeLights.otf");
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "KRIS-KRINGLE";
+  margin: 0;
+  color: whitesmoke;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "KRIS-KRINGLE";
+  margin: 0;
+  color: red;
+}
+
+.card-header{
+  background-image: url(../../../assets/backgraundRed.jpg);
+  background-position-x: 760px;
+}
+
+.card-header h3{
+  margin: 0;
+  color: whitesmoke;
+}
+
+.card {
+  height: 400px;
+}
+
+.card-link {
+  color: crimson;
+  text-decoration: none;
+  font-weight: bold;
+}

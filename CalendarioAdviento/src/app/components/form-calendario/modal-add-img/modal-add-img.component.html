@@ -1,0 +1,67 @@
+<ng-template #content let-close="close" let-dismiss="dismiss">
+  <div class="modal-content">
+    <div class="modal-header bg-danger text-white p-3">
+      <h5 class="modal-title fs-2" id="staticBackdropLabel">Calendario</h5>
+      <button
+        type="button"
+        class="btn-close text-white"
+        (click)="cerrar()"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <div class="modal-body">
+      <div
+        class="d-flex justify-content-center"
+        id="add-photo-container"
+      >
+        <div style="position: relative" id="img3" class="figure-calendarie">
+          <img
+            [src]="photoSelected || '../../../../../assets/noimage.png'"
+            class="img-fluid add-new-photo"
+            alt="No image"
+            (click)="addphoto.click()"
+          />
+          <input
+            type="file"
+            multiple
+            id="addphoto"
+            name="images[]"
+            (change)="onPhotoSelected($event, 1)"
+            #addphoto
+          />
+        </div>
+      </div>
+      <div class="m-3 fs-4">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Mensaje</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          [(ngModel)]="mensaje"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button
+        type="submit"
+        class="btn-danger fs-5 p-1 rounded-3"
+        aria-label="Close"
+        (click)="aceptar()"
+      >
+        Insertar
+      </button>
+      <button
+        type="submit"
+        class="btn-danger fs-5 p-1 rounded-3"
+        aria-label="Close"
+        (click)="cerrar()"
+      >
+        Cerrar
+      </button>
+    </div>
+  </div>
+</ng-template>

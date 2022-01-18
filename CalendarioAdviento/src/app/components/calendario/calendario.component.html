@@ -1,0 +1,74 @@
+<header
+  class="container-fluid text-white p-4 text-center"
+>
+  <h1>Generar Calendario</h1>
+</header>
+
+<div id="calendario" class="container-fluid mt-5 mb-5 text-center align-center">
+  
+  <div
+    *ngFor="let imagen of calendario?.imagenes; let index = index"
+    style="position: relative"
+    id="img{{ index + 1 }}"
+    class="figure-calendarie"
+    (click)="ShowImange(index)"
+    data-bs-toggle="modal"
+    data-bs-target="#mostrarImagenModal"
+  >
+    <div
+      class="celda-numerica"
+      *ngIf="calendario.imagenes[index].visto == null || calendario.imagenes[index].visto == false"
+    >
+      {{ index + 1 }}
+    </div>
+    <app-figure
+      *ngIf="calendario.imagenes[index].visto"
+      image="{{ calendario.imagenes[index].src }}"
+    ></app-figure>
+  </div>
+
+  <div class="modal" tabindex="-1" id="mostrarImagenModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white p-3">
+          <h5 class="modal-title fs-2" id="staticBackdropLabel">Calendario</h5>
+          <button
+            type="button"
+            class="btn-close text-white"
+            aria-label="Close"
+            (click)="botoncerrar.click()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <figure class="figure">
+            <img
+              src="{{ imageModal }}"
+              class="figure-img img-fluid rounded"
+              alt="..."
+            />
+          </figure>
+          <div class="m-3 text-start"  >
+            <p>{{mensajeModal}}</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="btn-danger p-1 fs-5 rounded-3"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            #botoncerrar
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 mb-5 pb-5">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
